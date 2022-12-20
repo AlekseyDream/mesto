@@ -1,17 +1,20 @@
-# Проект: Место
+# Проект: Путешествие по России
 
-### Обзор
+### Сайт
+https://alekseydream.github.io/russian-travel/
 
-* Figma
-* Картинки
+**Описание**
+
+Адаптивная вёрстка по макету в Figma. Контрольные точки: 320, 768, 1024, 1280px
 
 **Figma**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* [Ссылка на макет в Figma](https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-mobile?node-id=28503%3A0)
 
-**Картинки**
-
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
-
-Удачи!
+**Используемые технологии**
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>Flexbox</li>
+  <li>Grid</li>
+</ul>
