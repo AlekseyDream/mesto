@@ -238,7 +238,7 @@
     line-height: 29px;
     color: #000000;
     text-overflow: ellipsis;
-    /*white-space: nowrap; */
+    white-space: nowrap;
     overflow: hidden;
 
 }
@@ -293,27 +293,42 @@
     width: 100%;
 }
 
-
 .popup__container {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 25px black;
     box-sizing: border-box;
-    width: 430px;
-    height: 330px;
-    padding: 34px 36px 37px;
+    min-width: 282px;
+    min-height: 322px;
+    width: calc(100% - 38px);
+    padding: 25px 22px;
     position: relative;
+}
 
+@media (min-width: 768px) {
+    .popup__container {
+        max-width: 430px;
+        max-height: 330px;
+        padding: 34px 36px 37px;
+    }
 }
 
 .popup__title {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 18px;
+    line-height: 22px;
     color: #000000;
-    margin: 0 0 54px;
+    margin: 0 0 75px;
+}
+
+@media (min-width: 768px) {
+    .popup__title {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 0 54px;
+    }
 }
 
 .popup__input {
@@ -328,6 +343,8 @@
     padding: 10px 0;
     width: 100%;
 }
+
+
 
 .popup__button-close {
     background-color: transparent;
@@ -346,6 +363,26 @@
     width: 32px;
 }
 
+@media (min-width: 768px) {
+    .popup__button-close {
+        background-color: transparent;
+        background-image: url(/images/Close-Icon.svg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        transition: opacity .3s linear;
+        background-size: 32px;
+        height: 32px;
+        right: -40px;
+        top: -40px;
+        width: 32px;
+    }
+}
+
+
 .popup__button-save {
     background-color: #000000;
     border: none;
@@ -360,7 +397,26 @@
     margin-top: auto;
     padding: 14px;
     text-align: center;
-    
     transition: opacity .3s linear;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .popup__button-save {
+        background-color: #000000;
+        border: none;
+        border-radius: 2px;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: 'Inter';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17px;
+        margin-top: auto;
+        padding: 14px;
+        text-align: center;
+        transition: opacity .3s linear;
+        width: 100%;
+    }
 }
