@@ -1,3 +1,7 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+
 .page {
     max-width: 1280px;
     min-width: 320px;
@@ -26,14 +30,15 @@
     margin-bottom: 41px;
 }
 
-.Profile {
+.profile {
     display: flex;
     margin: 0 auto;
     max-width: 880px;
+    align-items: center;
+    text-align: left;
 }
 
-.Profile__Avatar {
-    background-image: url(../images/kusto-avatar.jpg);
+.profile__avatar {
     background-size: cover;
     border-radius: 50%;
     height: 120px;
@@ -41,9 +46,27 @@
     width: 120px;
 }
 
-.Profile__info {
-    display: flex;
+.profile__info {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     align-items: baseline;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.profile__name {
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .profile__button-edit {
@@ -65,7 +88,7 @@
     width: 18px;
 }
 
-.Profile__Button-Add {
+.profile__Button-Add {
     background-color: transparent;
     background-image: url(../images/logo-plus.svg);
     background-position: 50%;
@@ -80,13 +103,22 @@
     -o-transition: opacity .3s linear;
     transition: opacity .3s linear;
     width: 150px;
+    background-size: 22px;
+    margin-left: auto;
 }
 
-.Elements {
+.profile__description {
+    margin: 16px auto 25px auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.gallery {
+    max-width: 880px;
     margin: 51px auto 67px auto;
-}
-
-.Elements__Element {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     grid-gap: 20px 17px;
@@ -94,6 +126,57 @@
     grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
     justify-content: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
+}
+
+.profile__content {
+    margin: 0 0 0 30px;
+    max-width: 60%;
+}
+
+.gallery__like {
+    background-color: transparent;
+    background-image: url(/images/logo-like.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    display: block;
+    flex-shrink: 0;
+    height: 19px;
+    margin-bottom: 3px;
+    -webkit-transition: opacity .3s linear;
+    -o-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    width: 22px;
+}
+
+.gallery__info {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 26px;
+    justify-content: space-between;
+    padding: 22px 15px 22px 21px;
+}
+
+.gallery__title {
+    color: #000000;
+}
+
+.gallery__image {
+    Width: 282px;
+    Height: 282px;
+}
+
+.footer {
+    max-width: 880px;
+    margin: 51px auto 67px auto;
 }
