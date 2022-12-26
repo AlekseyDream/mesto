@@ -63,7 +63,7 @@
             <article class="gallery__element">
                 <img src="./images/karachaevsk.jpg" alt="" class="gallery__image">
                 <div class="gallery__info">
-                    <h3 class="gallery__title">Карачаево-Че...</h3>
+                    <h3 class="gallery__title">Карачаево-Черкесия</h3>
                     <button class="gallery__like"></button>
                 </div>
             </article>
@@ -72,22 +72,14 @@
     <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
-    <section class="popup" id="popup-edit-profile">
+    <section class="popup">
         <div class="popup__container">
+            <p class="popup__title">Редактировать профиль</p>
             <button type="button" class="popup__button-close"></button>
-            <form class="popup__form" action="#" method="post" novalidate>
-                <p class="popup__title">Редактировать профиль</p>
-                <label for="name" class="popup__label">
-                    <input type="text" name="name" id="name" class="popup__input" placeholder="Введите имя"
-                        minlength="2" maxlength="40" required>
-                    <p class="popup__error" id="name-error"></p>
-                </label>
-                <label for="position" class="popup__label">
-                    <input type="text" name="position" id="position" class="popup__input"
-                        placeholder="Укажите профессию" minlength="2" maxlength="200" required>
-                    <p class="popup__error" id="position-error"></p>
-                </label>
-                <button type="submit" class="popup__button-save">Сохранить</button>
+            <form class="popup__form">
+            <input type="text" class="popup__input popup__input_data_name" placeholder="Имя">
+            <input type="text" class="popup__input popup__input_data_about" placeholder="О себе">
+            <button type="submit" class="popup__button-save">Сохранить</button>
             </form>
         </div>
     </section>
