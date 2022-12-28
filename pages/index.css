@@ -137,6 +137,19 @@
     width: 18px;
 }
 
+.profile__button-edit:hover {
+    opacity: 0.6;
+}
+
+
+@media (min-width: 768px) {
+    .profile__button-edit {
+        height: 24px;
+        width: 24px;
+    }  
+}
+
+
 .profile__Button-Add {
     background-color: transparent;
     background-image: url(../images/logo-plus.svg);
@@ -159,6 +172,11 @@
         width: 150px;
     }
 }
+
+.profile__Button-Add:hover {
+    opacity: 0.6;
+}
+
 
 .profile__description {
     margin: 0;
@@ -218,6 +236,14 @@
     transition: opacity .3s linear;
     width: 22px;
 }
+
+.gallery__like:hover {
+    opacity: 0.5;
+  }
+  
+  .gallery__like:active {
+    background-color: #000000;
+  }
 
 .gallery__info {
     align-items: center;
@@ -298,8 +324,6 @@
     display: flex;
 }
 
-.popup__input_data_name {}
-
 .popup__container {
     background-color: white;
     border-radius: 10px;
@@ -334,11 +358,11 @@
     .popup__title {
         font-size: 24px;
         line-height: 29px;
-        margin: 0 34px 48px 0;
+        margin: 0 0 54px 0;
     }
 }
 
-.popup__input {
+.popup__form-input {
     border: none;
     border-bottom: 1px solid #000000;
     font-family: 'Inter';
@@ -346,7 +370,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 17px;
-    padding: 10px 0;
+    padding-bottom: 13px; 
     width: 100%;
 }
 
@@ -360,24 +384,15 @@
     display: block;
     position: absolute;
     transition: opacity .3s linear;
-    background-size: 32px;
-    height: 32px;
-    right: -40px;
-    top: -40px;
-    width: 32px;
+    background-size: 20px;
+    height: 20px;
+    width: 20px;
+    right: 0;
+    top: -50px;
 }
 
 @media (min-width: 768px) {
     .popup__button-close {
-        background-color: transparent;
-        background-image: url(/images/Close-Icon.svg);
-        background-position: 50%;
-        background-repeat: no-repeat;
-        border: none;
-        cursor: pointer;
-        display: block;
-        position: absolute;
-        transition: opacity .3s linear;
         background-size: 32px;
         height: 32px;
         right: -40px;
@@ -386,6 +401,9 @@
     }
 }
 
+.popup__button-close:hover {
+    opacity: 0.6;
+}
 
 .popup__button-save {
     background-color: #000000;
@@ -423,4 +441,20 @@
         transition: opacity .3s linear;
         width: 100%;
     }
+}
+
+.popup__button-save:hover {
+    opacity: 0.6;
+}
+
+.popup__form_Invisible_name {
+    margin: 0;
+    min-height: 30px;
+    opacity: 0;
+}
+
+.popup__form_Invisible_about {
+    margin: 0;
+    min-height: 48px;
+    opacity: 0;
 }

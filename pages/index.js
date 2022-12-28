@@ -4,8 +4,8 @@ let popupButtonClose = popup.querySelector ('.popup__button-close');
 let profileName = document.querySelector ('.profile__name');
 let profileJob = document.querySelector ('.profile__description');
 let input = document.querySelector ('.popup__form');
-let nameInput = input.querySelector ('.popup__input_data_name');
-let jobInput = input.querySelector ('.popup__input_data_about');
+let nameInput = input.querySelector ('.popup__form-input_data_name');
+let jobInput = input.querySelector ('.popup__form-input_data_about');
 let inputSumbitButton = input.querySelector ('.popup__button-save');
 
 function openPopup() {
