@@ -1,6 +1,6 @@
 .gallery__like {
     background-color: transparent;
-    background-image: url(/images/logo-like.svg);
+    background-image: url(../../../images/logo-like.svg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
