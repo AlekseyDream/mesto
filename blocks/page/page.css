@@ -1,8 +1,9 @@
 .page {
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     background-color: #000000;
     color: #FFFFFF;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Arial', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -15,6 +16,12 @@
     min-height: 100vh;
     width: calc(100% - 38px);
     max-width: 880px;
+}
+
+@media (min-width: 768px) {
+.page {
+    margin: 0 auto;
+}
 }
 
 @media (min-width: 1280px) {

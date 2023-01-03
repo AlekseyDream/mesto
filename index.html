@@ -17,56 +17,56 @@
             <img class="profile__avatar" src="./images/kusto-avatar.jpg" alt="Аватарка">
             <div class="profile__content">
                 <div class="profile__info">
-                    <h2 class="profile__name">Жак-Ив Кусто</h2>
-                    <button type="button" class="profile__button-edit"></button>
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button type="button" class="profile__buttonEdit"></button>
                 </div>
-                <p class="profile__description">Исследователь океана</p>
+                <h2 class="profile__description">Исследователь&nbsp;океана</h2>
             </div>
-            <button type="button" class="profile__Button-Add hover"></button>
+            <button type="button" class="profile__buttonAdd hover"></button>
         </section>
         <section class="gallery">
-            <article class="gallery__element">
-                <img src="./images/karachaevsk.jpg" alt="" class="gallery__image">
+            <div class="gallery__element">
+                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="gallery__image">
                 <div class="gallery__info">
                     <h3 class="gallery__title">Карачаевск</h3>
-                    <button class="gallery__like"></button>
+                    <button type="button" class="gallery__like"></button>
                 </div>
-            </article>
-            <article class="gallery__element">
-                <img src="./images/elbrus.jpg" alt="" class="gallery__image">
+            </div>
+            <div class="gallery__element">
+                <img src="./images/elbrus.jpg" alt="Гора Эльбрус" class="gallery__image">
                 <div class="gallery__info">
                     <h3 class="gallery__title">Гора Эльбрус</h3>
-                    <button class="gallery__like"></button>
+                    <button type="button" class="gallery__like"></button>
                 </div>
-            </article>
-            <article class="gallery__element">
-                <img src="./images/dombai.jpg" alt="" class="gallery__image">
+            </div>
+            <div class="gallery__element">
+                <img src="./images/dombai.jpg" alt="Домбай" class="gallery__image">
                 <div class="gallery__info">
                     <h3 class="gallery__title">Домбай</h3>
-                    <button class="gallery__like"></button>
+                    <button type="button" class="gallery__like"></button>
                 </div>
-            </article>
-            <article class="gallery__element">
-                <img src="./images/elbrus.jpg" alt="" class="gallery__image">
+            </div>
+            <div class="gallery__element">
+                <img src="./images/elbrus.jpg" alt="Гора Эльбрус" class="gallery__image">
                 <div class="gallery__info">
                     <h3 class="gallery__title">Гора Эльбрус</h3>
-                    <button class="gallery__like"></button>
+                    <button type="button" class="gallery__like"></button>
                 </div>
-            </article>
-            <article class="gallery__element">
-                <img src="./images/dombai.jpg" alt="" class="gallery__image">
+            </div>
+            <div class="gallery__element">
+                <img src="./images/dombai.jpg" alt="Домбай" class="gallery__image">
                 <div class="gallery__info">
                     <h3 class="gallery__title">Домбай</h3>
-                    <button class="gallery__like"></button>
+                    <button type="button" class="gallery__like"></button>
                 </div>
-            </article>
-            <article class="gallery__element">
-                <img src="./images/karachaevsk.jpg" alt="" class="gallery__image">
+            </div>
+            <div class="gallery__element">
+                <img src="./images/karachaevsk.jpg" alt="Карачаево-Черкесия" class="gallery__image">
                 <div class="gallery__info">
                     <h3 class="gallery__title">Карачаево-Черкесия</h3>
-                    <button class="gallery__like"></button>
+                    <button type="button" class="gallery__like"></button>
                 </div>
-            </article>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -75,17 +75,17 @@
     <section class="popup">
         <div class="popup__container">
             <p class="popup__title">Редактировать профиль</p>
-            <button type="button" class="popup__button-close"></button>
-            <form class="popup__form">
-            <input type="text" class="popup__form-input popup__form-input_data_name" placeholder="Имя">
-            <p class="popup__form-Invisible-name"></p>
-            <input type="text" class="popup__form-input popup__form-input_data_about" placeholder="О себе">
-            <p class="popup__form-Invisible-about"></p>
-            <button type="submit" class="popup__button-save">Сохранить</button>
+            <button type="button" class="popup__buttonClose"></button>
+            <form class="popup__form" name="popupForm">
+                <input type="text" name="InputName" class="popup__formInput popup__formInput_data_name"
+                    placeholder="Имя">
+                <input type="text" name="InputAbout" class="popup__formInput popup__formInput_data_about"
+                    placeholder="О себе">
+                <button type="submit" class="popup__buttonSave">Сохранить</button>
             </form>
         </div>
     </section>
-    <script src="./pages/index.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

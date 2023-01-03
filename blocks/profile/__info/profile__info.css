@@ -1,6 +1,5 @@
 .profile__info {
-    align-items: baseline;
     display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
+    margin: 0 0 7px;
+    align-items: center;
 }

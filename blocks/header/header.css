@@ -1,9 +1,10 @@
 .header {
+    min-width: 320px;
     margin-top: 28px;
     max-height: 56px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #545454;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.7);
     box-sizing: border-box;
 }
 

@@ -9,6 +9,6 @@
 
 @media (min-width: 768px) {
     .gallery {
-        margin: 51px auto 67px auto;
+        margin: 51px auto 0 auto;
     }
 }
