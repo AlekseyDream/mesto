@@ -8,8 +8,8 @@
 @import url(../blocks/profile/__avatar/profile__avatar.css);
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__name/profile__name.css);
-@import url(../blocks/profile/__buttonEdit/profile__buttonEdit.css);
-@import url(../blocks/profile/__buttonAdd/profile__buttonAdd.css);
+@import url(../blocks/profile/__button-edit/profile__button-edit.css);
+@import url(../blocks/profile/__button-add/profile__button-add.css);
 @import url(../blocks/profile/__description/profile__description.css);
 @import url(../blocks/profile/__content/profile__content.css);
 @import url(../blocks/gallery/gallery.css);
@@ -25,9 +25,9 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__title/popup__title.css);
-@import url(../blocks/popup/__formInput/popup__formInput.css);
-@import url(../blocks/popup/__buttonClose/popup__buttonClose.css);
-@import url(../blocks/popup/__buttonSave/popup__buttonSave.css);
-@import url(../blocks/popup/__formInvisibleName/popup__formInvisibleName.css);
-@import url(../blocks/popup/__formInvisibleAbout/popup__formInvisibleAbout.css);
+@import url(../blocks/popup/__form-input/popup__form-input.css);
+@import url(../blocks/popup/__button-close/popup__button-close.css);
+@import url(../blocks/popup/__button-save/popup__button-save.css);
+@import url(../blocks/popup/__form-invisible-name/popup__form-invisible-name.css);
+@import url(../blocks/popup/__form-invisible-about/popup__form-invisible-about.css);
 
