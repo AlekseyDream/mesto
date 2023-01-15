@@ -28,7 +28,7 @@
             <template id="gallery-template">
                 <li class="gallery__element">
                     <div class="gallery__element-image">
-                        <img alt="" class="gallery__image">
+                        <img class="gallery__image" src="" alt="">
                         <button type="button" class="gallery__button-delete"></button>
                     </div>
                     <div class="gallery__info">
@@ -42,7 +42,7 @@
     <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
-    <div class="popup popup__profile-edit">
+    <div class="popup__profile-edit popup">
         <div class="popup__container">
             <p class="popup__title">Редактировать профиль</p>
             <button type="button" class="popup__button-close"></button>
@@ -55,7 +55,7 @@
             </form>
         </div>
     </div>
-    <div class="popup popup__card-add">
+    <div class="popup__card-add popup">
         <div class="popup__container">
             <p class="popup__title">Новое место</p>
             <button type="button" class="popup__button-close"></button>
@@ -63,16 +63,16 @@
                 <input type="text" name="inputTitle" class="popup__form-input popup__form-input_data_title"
                     placeholder="Название">
                 <input type="text" name="inputLink" class="popup__form-input popup__form-input_data_link"
-                    placeholder="ССылку на картинку">
+                    placeholder="Ссылка на картинку">
                 <button type="submit" class="popup__button-save">Создать</button>
             </form>
         </div>
     </div>
-    <div class="popup popup__image-add">
-        <div class="popup__container">
-            <img class="popup__image" alt="" />
-            <p class="popup__caption"></p>
+    <div class="popup__image-add popup">
+        <div class="popup__container popup__container_data_image">
             <button type="button" class="popup__button-close"></button>
+            <img class="popup__image" src="" alt="">
+            <p class="popup__caption"></p>
         </div>
     </div>
     <script src="./scripts/index.js"></script>
