@@ -12,7 +12,7 @@
     <header class="header">
         <img class="header__logo" src="./images/header-logo.svg" alt="Логотип сайта Mesto">
     </header>
-    <main class="main">
+    <main class="content">
         <section class="profile">
             <img class="profile__avatar" src="./images/kusto-avatar.jpg" alt="Аватарка">
             <div class="profile__content">
@@ -22,18 +22,20 @@
                 </div>
                 <h2 class="profile__description">Исследователь&nbsp;океана</h2>
             </div>
-            <button type="button" class="profile__button-add hover"></button>
+            <button type="button" class="profile__button-addCard hover"></button>
         </section>
         <section class="gallery">
             <template id="gallery-template">
-                <div class="gallery__element">
-                    <img alt="" class="gallery__image">
-                    <button type="button" class="gallery__button-delete"></button>
+                <li class="gallery__element">
+                    <div class="gallery__element-image">
+                        <img alt="" class="gallery__image">
+                        <button type="button" class="gallery__button-delete"></button>
+                    </div>
                     <div class="gallery__info">
                         <h3 class="gallery__title"></h3>
                         <button type="button" class="gallery__button-like"></button>
                     </div>
-                </div>
+                </li>
             </template>
         </section>
     </main>
@@ -45,9 +47,9 @@
             <p class="popup__title">Редактировать профиль</p>
             <button type="button" class="popup__button-close"></button>
             <form class="popup__form" name="popupForm">
-                <input type="text" name="InputName" class="popup__form-input popup__form-input_data_name"
+                <input type="text" name="inputName" class="popup__form-input popup__form-input_data_name"
                     placeholder="Имя">
-                <input type="text" name="InputAbout" class="popup__form-input popup__form-input_data_about"
+                <input type="text" name="inputAbout" class="popup__form-input popup__form-input_data_about"
                     placeholder="О себе">
                 <button type="submit" class="popup__button-save">Сохранить</button>
             </form>
@@ -58,16 +60,16 @@
             <p class="popup__title">Новое место</p>
             <button type="button" class="popup__button-close"></button>
             <form class="popup__form" name="popupForm">
-                <input type="text" name="InputTitle" class="popup__form-input popup__form-input_data_title"
+                <input type="text" name="inputTitle" class="popup__form-input popup__form-input_data_title"
                     placeholder="Название">
-                <input type="text" name="InputLink" class="popup__form-input popup__form-input_data_link"
+                <input type="text" name="inputLink" class="popup__form-input popup__form-input_data_link"
                     placeholder="ССылку на картинку">
                 <button type="submit" class="popup__button-save">Создать</button>
             </form>
         </div>
     </div>
-    <div class="popup popup_data_image">
-        <div class="popup__container popup__container_data_image">
+    <div class="popup popup__image-add">
+        <div class="popup__container">
             <img class="popup__image" alt="" />
             <p class="popup__caption"></p>
             <button type="button" class="popup__button-close"></button>
