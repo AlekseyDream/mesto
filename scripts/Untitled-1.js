@@ -1,25 +1,31 @@
 const content = document.querySelector(".content");
-const popupProfile = document.querySelector(".popup_type_profile");
-const popupCard = document.querySelector(".popup_type_card");
 const profileButton = content.querySelector(".profile__button");
-const popupProfileClose = popupProfile.querySelector(".popup__button-close");
-const popupCardClose = popupCard.querySelector(".popup__button-close");
-const profileAddCard = document.querySelector(".profile__add-card");
 const profileTitle = content.querySelector(".profile__title");
 const profileSubtitle = content.querySelector(".profile__subtitle");
+
+const popupProfile = document.querySelector(".popup_type_profile");
+const popupProfileClose = popupProfile.querySelector(".popup__button-close");
 const profileForm = popupProfile.querySelector(".popup__form");
 const nameInput = popupProfile.querySelector(".popup__text_type_name");
 const jobInput = popupProfile.querySelector(".popup__text_type_job");
+
+const popupCard = document.querySelector(".popup_type_card");
 const cardForm = popupCard.querySelector(".popup__form");
 const titleInput = popupCard.querySelector(".popup__text_type_title");
 const imageInput = popupCard.querySelector(".popup__text_type_image");
-const cardTemplete = document.querySelector("#element-template").content;
-const cardContainer = document.querySelector(".elements-grid");
-const elementDeleteCard = cardTemplete.querySelector(".element__button-delete");
+const popupCardClose = popupCard.querySelector(".popup__button-close");
+
 const popupCardImage = document.querySelector(".popup_type_image");
+const popupImageClose = popupCardImage.querySelector(".popup__button-close");
+
+const cardTemplete = document.querySelector("#element-template").content;
+const elementDeleteCard = cardTemplete.querySelector(".element__button-delete");
+
+const profileAddCard = document.querySelector(".profile__add-card");
+const cardContainer = document.querySelector(".elements-grid");
 const popupImage = document.querySelector(".popup__image");
 const popupCaption = document.querySelector(".popup__caption");
-const popupImageClose = popupCardImage.querySelector(".popup__button-close");
+
 
 function createCard({ name, link }) {
   const newCard = cardTemplete.querySelector(".element").cloneNode(true);

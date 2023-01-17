@@ -1,7 +1,4 @@
 .popup__image-add {
-    background-color: transparent;
-    max-width: initial;
-    position: relative;
-    width: auto;
-    padding: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
 }

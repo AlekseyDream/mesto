@@ -1,47 +1,34 @@
-const popup = document.querySelector('.popup');
+//const popup = document.querySelector('.popup');
 const content = document.querySelector(".content");
+const buttonProfileEdit = content.querySelector('.profile__button-edit');
+const profileName = content.querySelector('.profile__name');
+const profileDescription = content.querySelector('.profile__description');
+
 const popupProfile = document.querySelector('.popup__profile-edit');
-const profileName = popupProfile.querySelector('.profile__name');
-const profileDescription = popupProfile.querySelector('.profile__description');
-const buttonProfileEdit = document.querySelector('.profile__button-edit');
-
-const buttonAddCard = document.querySelector('.profile__button-addCard');
-
-
-
-const inputForm = document.querySelector('.popup__form');
-
-const nameInput = inputForm.querySelector('.popup__form-input_data_name');
-
-const jobInput = inputForm.querySelector('.popup__form-input_data_about');
-
-const inputSumbitButton = inputForm.querySelector('.popup__button-save');
-
-const cardContainer = document.querySelector('.gallery');
-
-
+const popupProfileClose = popupProfile.querySelector('.popup__button-close');
+const inputForm = popupProfile.querySelector('.popup__form');
+const nameInput = popupProfile.querySelector('.popup__form-input_data_name');
+const jobInput = popupProfile.querySelector('.popup__form-input_data_about');
 
 const popupCard = document.querySelector('.popup__card-add');
+const popupCardClose = popupCard.querySelector('.popup__button-close');
+const titleInput = popupCard.querySelector('.popup__form-input_data_title');
+const imageInput = popupCard.querySelector('.popup__form-input_data_link');
+const cardForm = popupCard.querySelector('.popup__form');
 
 const popupCardImage = document.querySelector('.popup__image-add');
-
-const popupProfileClose = popupProfile.querySelector('.popup__button-close');
-
-const popupCardClose = popupCard.querySelector('.popup__button-close');
-
 const popupCardImageClose = popupCardImage.querySelector('.popup__button-close');
 
-const popupImage = document.querySelector('.popup__image');
-
 const cardTemplete = document.querySelector('#gallery-template').content;
+//const elementDeleteCard = cardTemplete.querySelector('.gallery__button-delete');
 
+const buttonAddCard = document.querySelector('.profile__button-addCard');
+const cardContainer = document.querySelector('.gallery');
+const popupImage = document.querySelector('.popup__image');
 const popupCaption = document.querySelector('.popup__caption');
 
-const cardForm = document.querySelector('.popup__form');
+//const inputSumbitButton = inputForm.querySelector('.popup__button-save');
 
-const titleInput = document.querySelector('.popup__form-input_data_title');
-
-const imageInput = document.querySelector('.popup__form-input_data_link');
 
 
 
