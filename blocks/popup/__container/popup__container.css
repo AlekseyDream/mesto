@@ -5,6 +5,8 @@
     border-radius: 10px;
     box-shadow: 0px 0px 25px 0px #00000026;
     box-sizing: border-box;
+    margin: 122px auto;
+    max-width: 282px;
     width: calc(100% - 38px);
     padding: 0 22px;
     position: relative;
