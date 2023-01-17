@@ -3,19 +3,19 @@ const buttonProfileEdit = content.querySelector('.profile__button-edit');
 const profileName = content.querySelector('.profile__name');
 const profileDescription = content.querySelector('.profile__description');
 
-const popupProfile = document.querySelector('.popup__profile-edit');
+const popupProfile = document.querySelector('.popup_data_profile-edit');
 const popupProfileClose = popupProfile.querySelector('.popup__button-close');
 const inputForm = popupProfile.querySelector('.popup__form');
 const inputName = popupProfile.querySelector('.popup__form-input_data_name');
 const inputAbout = popupProfile.querySelector('.popup__form-input_data_about');
 
-const popupCard = document.querySelector('.popup__card-add');
+const popupCard = document.querySelector('.popup_data_card-add');
 const popupCardClose = popupCard.querySelector('.popup__button-close');
 const inputTitle = popupCard.querySelector('.popup__form-input_data_title');
 const inputImage = popupCard.querySelector('.popup__form-input_data_link');
 const cardForm = popupCard.querySelector('.popup__form');
 
-const popupCardImage = document.querySelector('.popup__image-add');
+const popupCardImage = document.querySelector('.popup_data_image-add');
 const popupCardImageClose = popupCardImage.querySelector('.popup__button-close');
 
 const cardTemplete = document.querySelector('#gallery-template').content;
