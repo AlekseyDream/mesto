@@ -33,6 +33,15 @@ function closePopup(popup) {
     popup.classList.remove('popup_opened');
 }
 
+const closeOverlay = Array.from(document.querySelectorAll('.popup'));
+  closeOverlay.forEach((popupItem) => {
+    popupItem.addEventListener('click', function (evt) {
+      if(evt.target.classList.contains('popup')) {
+      closePopup(popupItem);
+    };
+  });
+  });
+
 function handleFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = inputName.value;
