@@ -3,7 +3,7 @@ const enableValidation = {
     inputSelector: '.popup__form-input',
     submitButtonSelector: '.popup__button-save',
     inactiveButtonClass: 'popup__button-save_inactive',
-    inputErrorClass: 'popup__input-error',
+    inputErrorClass: 'popup__form-input_error',
     errorClass: 'popup__input-error_active'
 };
 
@@ -21,31 +21,34 @@ const hideInputError = (formElement, inputElement, enableValidation) => {
     errorElement.textContent = '';
 };
 
-const checkInputValidity = (formElement, inputElement) => {
+const checkInputValidity = (formElement, inputElement, enableValidation) => {
     if (!inputElement.validity.valid) {
-        showInputError(formElement, inputElement, inputElement.validationMessage);
+        showInputError(formElement, inputElement, inputElement.validationMessage, enableValidation);
     } else {
-        hideInputError(formElement, inputElement);
+        hideInputError(formElement, inputElement, enableValidation);
     }
-};
-
-
-
-const hasInvalidInput = (inputList) => {
-    return inputList.some((inputElement) => {
-        return !inputElement.validity.valid;
-    })
 };
 
 const toggleButtonState = (inputList, buttonElement, enableValidation) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(enableValidation.inactiveButtonClass);
-        // buttonElement.setAttribute('disabled', 'disabled');
-
+        //  buttonElement.setAttribute('disabled', 'disabled');
     } else {
         buttonElement.classList.remove(enableValidation.inactiveButtonClass);
-        // buttonElement.removeAttribute('disabled');
+        //  buttonElement.removeAttribute('disabled', 'disabled');
     }
+};
+
+const hasInvalidInput = (inputList) => {
+    return inputList.some((inputElement) => {
+      return !inputElement.validity.valid;
+    })
+  };
+
+const disableButton = (formElement, validationConfig) => {
+    const disable = formElement.querySelector(validationConfig.submitButtonSelector);
+    disable.classList.add(validationConfig.inactiveButtonClass);
+    disable.setAttribute('disabled', 'disabled');
 };
 
 const setEventListeners = (formElement, enableValidation) => {
