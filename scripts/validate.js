@@ -24,7 +24,8 @@ const hideInputError = (formElement, inputElement, enableValidation) => {
 const checkInputValidity = (formElement, inputElement, enableValidation) => {
     if (!inputElement.validity.valid) {
         showInputError(formElement, inputElement, inputElement.validationMessage, enableValidation);
-    } else {
+    } 
+    else {
         hideInputError(formElement, inputElement, enableValidation);
     }
 };
@@ -32,10 +33,11 @@ const checkInputValidity = (formElement, inputElement, enableValidation) => {
 const toggleButtonState = (inputList, buttonElement, enableValidation) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.setAttribute('disabled', 'disabled');
-        buttonElement.classList.add('popup__button-save_inactive');
-    } else {
+        buttonElement.classList.add(enableValidation.inactiveButtonClass);
+    } 
+    else {
         buttonElement.removeAttribute('disabled');
-        buttonElement.classList.remove('popup__button-save_inactive');
+        buttonElement.classList.remove(enableValidation.inactiveButtonClass);
     }
 };
 
@@ -46,7 +48,7 @@ const hasInvalidInput = (inputList) => {
 };
 
 const setEventListeners = (formElement, enableValidation) => {
-    const inputList = Array.from(document.querySelectorAll(enableValidation.inputSelector));
+    const inputList = Array.from(formElement.querySelectorAll(enableValidation.inputSelector));
     const buttonElement = formElement.querySelector(enableValidation.submitButtonSelector);
     toggleButtonState(inputList, buttonElement, enableValidation);
     inputList.forEach((inputElement) => {
