@@ -32,10 +32,10 @@ const checkInputValidity = (formElement, inputElement, enableValidation) => {
 const toggleButtonState = (inputList, buttonElement, enableValidation) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(enableValidation.inactiveButtonClass);
-        //  buttonElement.setAttribute('disabled', 'disabled');
+        buttonElement.setAttribute('disabled', 'disabled');
     } else {
         buttonElement.classList.remove(enableValidation.inactiveButtonClass);
-        //  buttonElement.removeAttribute('disabled', 'disabled');
+        buttonElement.removeAttribute('disabled');
     }
 };
 
@@ -63,8 +63,6 @@ const setEventListeners = (formElement, enableValidation) => {
     });
 };
 
-
-//Добавление обработчиков всем формам
 const enableValid = (enableValidation) => {
     const formList = Array.from(document.querySelectorAll(enableValidation.formSelector));
     formList.forEach((formElement) => {
