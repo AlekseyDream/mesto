@@ -1,4 +1,4 @@
-const enableValidation = {
+const validationConfig = {
     formSelector: '.popup__form',
     inputSelector: '.popup__form-input',
     submitButtonSelector: '.popup__button-save',
@@ -7,37 +7,37 @@ const enableValidation = {
     errorClass: 'popup__input-error_active'
 };
 
-const showInputError = (formElement, inputElement, errorMessage, enableValidation) => {
+const showInputError = (formElement, inputElement, errorMessage, validationConfig) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.add(enableValidation.inputErrorClass);
+    inputElement.classList.add(validationConfig.inputErrorClass);
     errorElement.textContent = errorMessage;
-    errorElement.classList.add(enableValidation.errorClass);
+    errorElement.classList.add(validationConfig.errorClass);
 };
 
-const hideInputError = (formElement, inputElement, enableValidation) => {
+const hideInputError = (formElement, inputElement, validationConfig) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.remove(enableValidation.inputErrorClass);
-    errorElement.classList.remove(enableValidation.errorClass);
+    inputElement.classList.remove(validationConfig.inputErrorClass);
+    errorElement.classList.remove(validationConfig.errorClass);
     errorElement.textContent = '';
 };
 
-const checkInputValidity = (formElement, inputElement, enableValidation) => {
+const checkInputValidity = (formElement, inputElement, validationConfig) => {
     if (!inputElement.validity.valid) {
-        showInputError(formElement, inputElement, inputElement.validationMessage, enableValidation);
+        showInputError(formElement, inputElement, inputElement.validationMessage, validationConfig);
     } 
     else {
-        hideInputError(formElement, inputElement, enableValidation);
+        hideInputError(formElement, inputElement, validationConfig);
     }
 };
 
-const toggleButtonState = (inputList, buttonElement, enableValidation) => {
+const toggleButtonState = (inputList, buttonElement, validationConfig) => {
     if (hasInvalidInput(inputList)) {
         buttonElement.setAttribute('disabled', 'disabled');
-        buttonElement.classList.add(enableValidation.inactiveButtonClass);
+        buttonElement.classList.add(validationConfig.inactiveButtonClass);
     } 
     else {
         buttonElement.removeAttribute('disabled');
-        buttonElement.classList.remove(enableValidation.inactiveButtonClass);
+        buttonElement.classList.remove(validationConfig.inactiveButtonClass);
     }
 };
 
@@ -47,26 +47,26 @@ const hasInvalidInput = (inputList) => {
     })
 };
 
-const setEventListeners = (formElement, enableValidation) => {
-    const inputList = Array.from(formElement.querySelectorAll(enableValidation.inputSelector));
-    const buttonElement = formElement.querySelector(enableValidation.submitButtonSelector);
-    toggleButtonState(inputList, buttonElement, enableValidation);
+const setEventListeners = (formElement, validationConfig) => {
+    const inputList = Array.from(formElement.querySelectorAll(validationConfig.inputSelector));
+    const buttonElement = formElement.querySelector(validationConfig.submitButtonSelector);
+    toggleButtonState(inputList, buttonElement, validationConfig);
     inputList.forEach((inputElement) => {
         inputElement.addEventListener('input', () => {
-            checkInputValidity(formElement, inputElement, enableValidation);
-            toggleButtonState(inputList, buttonElement, enableValidation);
+            checkInputValidity(formElement, inputElement, validationConfig);
+            toggleButtonState(inputList, buttonElement, validationConfig);
         });
     });
 };
 
-const enableValid = (enableValidation) => {
-    const formList = Array.from(document.querySelectorAll(enableValidation.formSelector));
+const enableValidation = (validationConfig) => {
+    const formList = Array.from(document.querySelectorAll(validationConfig.formSelector));
     formList.forEach((formElement) => {
         formElement.addEventListener('submit', function (evt) {
             evt.preventDefault();
         });
-        setEventListeners(formElement, enableValidation);
+        setEventListeners(formElement, validationConfig);
     });
 };
 
-enableValid(enableValidation);
+enableValidation(validationConfig);
