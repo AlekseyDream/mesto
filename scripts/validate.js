@@ -31,24 +31,18 @@ const checkInputValidity = (formElement, inputElement, enableValidation) => {
 
 const toggleButtonState = (inputList, buttonElement, enableValidation) => {
     if (hasInvalidInput(inputList)) {
-        buttonElement.classList.add(enableValidation.inactiveButtonClass);
         buttonElement.setAttribute('disabled', 'disabled');
+        buttonElement.classList.add('popup__button-save_inactive');
     } else {
-        buttonElement.classList.remove(enableValidation.inactiveButtonClass);
         buttonElement.removeAttribute('disabled');
+        buttonElement.classList.remove('popup__button-save_inactive');
     }
 };
 
 const hasInvalidInput = (inputList) => {
     return inputList.some((inputElement) => {
-      return !inputElement.validity.valid;
+        return !inputElement.validity.valid;
     })
-  };
-
-const disableButton = (formElement, validationConfig) => {
-    const disable = formElement.querySelector(validationConfig.submitButtonSelector);
-    disable.classList.add(validationConfig.inactiveButtonClass);
-    disable.setAttribute('disabled', 'disabled');
 };
 
 const setEventListeners = (formElement, enableValidation) => {
