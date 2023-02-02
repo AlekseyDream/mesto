@@ -33,7 +33,6 @@ function openPopup(popup) {
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
     document.addEventListener("keyup", keyHandler);
-    cardForm.reset();
 };
 
 const popups = Array.from(document.querySelectorAll('.popup'));
@@ -69,6 +68,7 @@ function handleProfileButton() {
 
 function handleAddCardButton() {
     openPopup(popupCard);
+    cardForm.reset();
 };
 
 function createCard({ name, link }) {
