@@ -64,6 +64,7 @@ function handleProfileButton() {
     openPopup(popupProfile);
     inputName.value = profileName.textContent;
     inputAbout.value = profileDescription.textContent;
+    cardForm.reset();
 };
 
 function handleAddCardButton() {
