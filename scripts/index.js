@@ -64,12 +64,10 @@ function handleProfileButton() {
     openPopup(popupProfile);
     inputName.value = profileName.textContent;
     inputAbout.value = profileDescription.textContent;
-    cardForm.reset();
 };
 
 function handleAddCardButton() {
     openPopup(popupCard);
-    cardForm.reset();
 };
 
 function createCard({ name, link }) {
@@ -129,6 +127,7 @@ popupProfileClose.addEventListener("click", function () {
 
 popupCardClose.addEventListener("click", function () {
     closePopup(popupCard);
+    cardForm.reset();
 });
 
 popupCardImageClose.addEventListener("click", function () {
