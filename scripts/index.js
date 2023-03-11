@@ -71,7 +71,7 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  document.addEventListener('keyup', keyHandler);
+  document.removeEventListener('keyup', keyHandler);
 };
 
 const popups = Array.from(document.querySelectorAll('.popup'));
