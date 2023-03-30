@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
 </head>
 
 <body class="page">
     <header class="header">
-        <img class="header__logo" src="<%=require('./images/header-logo.svg')%>" alt="Логотип сайта Mesto">
+        <img class="header__logo" src="./images/header-logo.svg" alt="Логотип сайта Mesto">
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar" src="<%=require('./images/kusto-avatar.jpg')%>" alt="Аватарка">
+            <img class="profile__avatar" src="./images/kusto-avatar.jpg" alt="Аватарка">
             <div class="profile__content">
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -39,9 +40,9 @@
         </section>
     </main>
     <footer class="footer">
-        <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+        <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
     </footer>
-    <div class="popup_data_profile-edit popup">
+    <div class="popup_data_profile-edit popup" id="popup-profile">
         <div class="popup__container">
             <p class="popup__title">Редактировать профиль</p>
             <button type="button" class="popup__button-close"></button>
@@ -58,7 +59,7 @@
             </form>
         </div>
     </div>
-    <div class="popup_data_card-add popup">
+    <div class="popup_data_card-add popup" id="popup-card">
         <div class="popup__container">
             <p class="popup__title">Новое место</p>
             <button type="button" class="popup__button-close"></button>
@@ -74,13 +75,13 @@
             </form>
         </div>
     </div>
-    <div class="popup_data_image-add popup">
+    <div class="popup_data_image-add popup" id="popup-image">
         <div class="popup__container  popup__container_data_image">
             <button type="button" class="popup__button-close"></button>
             <img class="popup__image" alt="">
             <p class="popup__caption"></p>
         </div>
     </div>
+    <script type="module" src="./pages/index.js"></script> 
 </body>
-
 </html>

@@ -1,3 +1,4 @@
+export const content = document.querySelector('.content');
 export const buttonProfileEdit = content.querySelector('.profile__button-edit');
 export const profileName = content.querySelector('.profile__name');
 export const profileDescription = content.querySelector('.profile__description');

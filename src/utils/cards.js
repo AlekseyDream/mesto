@@ -5,7 +5,7 @@ import Великий_каньон from '../images/Great_Canyon.jpg';
 import Памуккале from '../images/Pamukkale.jpg';
 import Венеция from '../images/Venice.jpg';
 
-export default initialCards = [
+const initialCards = [
     {
       name: 'Бамбуковый лес',
       link: Бамбуковый_лес
@@ -31,3 +31,5 @@ export default initialCards = [
       link: Венеция
     }
   ];
+
+export default initialCards;
