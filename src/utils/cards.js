@@ -1,9 +1,9 @@
-import Бамбуковый_лес from '../images/Bamboo_forest.jpg';
-import Горы_Тяньцзи from '../images/Tianzi_Mountains.jpg';
-import Остров_Санторини from '../images/Santorini_island.jpg';
-import Великий_каньон from '../images/Great_Canyon.jpg';
-import Памуккале from '../images/Pamukkale.jpg';
-import Венеция from '../images/Venice.jpg';
+import { Бамбуковый_лес } from '../images/Bamboo_forest.jpg';
+import { Горы_Тяньцзи } from '../images/Tianzi_Mountains.jpg';
+import { Остров_Санторини } from '../images/Santorini_island.jpg';
+import { Великий_каньон } from '../images/Great_Canyon.jpg';
+import { Памуккале } from '../images/Pamukkale.jpg';
+import { Венеция } from '../images/Venice.jpg';
 
 const initialCards = [
     {

@@ -1,12 +1,12 @@
-import Popup from "./Popup";
+import Popup from "./Popup.js";
 
-export default class PopupWithForm extends Popup {
+export class PopupWithForm extends Popup {
   constructor(popupSelector, handleSumbit) {
-    super(popupSelector)
-    this._formEditProfile = this._popup.querySelector('.popup__form');
+    super(popupSelector);
+    this._formElement = this._popup.querySelector(".popup__form");
     this._handleSumbit = handleSumbit;
-    this._inputList = Array.from(this._formEditProfile.querySelectorAll('.popup__form-input'));
-    
+    this._inputList = Array.from(this._formElement.querySelectorAll(".popup__form-input"));
+    this._button = this._formElement.querySelector(".popup__button-save");
   }
 
   _getInputValues() {
@@ -17,18 +17,16 @@ export default class PopupWithForm extends Popup {
     return formValues;
   }
 
-  closePopup() {
-    super.closePopup();
-    this._formEditProfile.reset();
+  close() {
+    super.close();
+    this._formElement.reset();
   }
 
   setEventListeners() {
     super.setEventListeners();
-    this._formEditProfile.addEventListener('submit', (evt) => {
+    this._formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
       this._handleSumbit(this._getInputValues());
-      this.closePopup();
     });
-
   }
-};
+}
