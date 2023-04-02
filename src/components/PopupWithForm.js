@@ -1,6 +1,6 @@
 import Popup from "./Popup.js";
 
-export class PopupWithForm extends Popup {
+export default class PopupWithForm extends Popup {
   constructor(popupSelector, handleSumbit) {
     super(popupSelector);
     this._formElement = this._popup.querySelector(".popup__form");

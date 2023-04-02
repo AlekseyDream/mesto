@@ -1,13 +1,9 @@
-export class FormValidator {
+export default class FormValidator {
   constructor(formElement, listSelector) {
     this._formElement = formElement;
     this._listSelector = listSelector;
-    this._inputList = Array.from(
-      formElement.querySelectorAll(this._listSelector.inputSelector)
-    );
-    this._buttonElement = this._formElement.querySelector(
-      this._listSelector.submitButtonSelector
-    );
+    this._inputList = Array.from(formElement.querySelectorAll(this._listSelector.inputSelector));
+    this._buttonElement = this._formElement.querySelector(this._listSelector.submitButtonSelector);
   }
 
   _showInputError = (inputElement, errorMessage) => {
@@ -73,3 +69,4 @@ export class FormValidator {
     this._setEventListeners();
   };
 }
+
