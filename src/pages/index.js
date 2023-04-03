@@ -36,8 +36,8 @@ popupCards.setEventListeners();
 
 const userInfo = new UserInfo(".profile__name", ".profile__description");
 
-const handleCardClick = (inputTitle, inputLink) => {
-  popupWithImage.open(inputTitle, inputLink);
+const handleCardClick = (name, link) => {
+  popupWithImage.open(name, link);
 }
 
 buttonProfileEdit.addEventListener('click', () => {

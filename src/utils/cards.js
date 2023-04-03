@@ -7,28 +7,28 @@ import Venice from '../images/Venice.jpg';
 
 const initialCards = [
     {
-      inputTitle: 'Бамбуковый лес',
-      inputLink: BambooForest,
+      name: 'Бамбуковый лес',
+      link: BambooForest,
     },
     {
-      inputTitle: 'Горы Тяньцзи',
-      inputLink: TianziMountains,
+      name: 'Горы Тяньцзи',
+      link: TianziMountains,
     },
     {
-      inputTitle: 'Остров Санторини',
-      inputLink: SantoriniIsland,
+      name: 'Остров Санторини',
+      link: SantoriniIsland,
     },
     {
-      inputTitle: 'Великий каньон',
-      inputLink: GreatCanyon,
+      name: 'Великий каньон',
+      link: GreatCanyon,
     },
     {
-      inputTitle: 'Памуккале',
-      inputLink: Pamukkale,
+      name: 'Памуккале',
+      link: Pamukkale,
     },
     {
-      inputTitle: 'Венеция',
-      inputLink: Venice,
+      name: 'Венеция',
+      link: Venice,
     }
   ];
   export default initialCards;
