@@ -43,8 +43,8 @@ const handleCardClick = (name, link) => {
 buttonProfileEdit.addEventListener('click', () => {
   popupProfile.open();
   const info = userInfo.getUserInfo();
-  inputName.value = info.name
-  inputAbout.value = info.about
+  inputName.value = info.name;
+  inputAbout.value = info.about;
   profileValidator.resetValid();
 });
 
