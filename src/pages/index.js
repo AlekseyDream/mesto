@@ -23,9 +23,7 @@ cardValidator.enableValidation();
 const profileValidator = new FormValidator(formEditProfile, validationConfig);
 profileValidator.enableValidation();
 
-const section = new Section({
-  items: initialCards, renderer: (item) => createCard(item)
-}, ".gallery");
+const section = new Section({items: initialCards, renderer: (item) => createCard(item)}, ".gallery");
 
 const popupProfile = new PopupWithForm(".popup_data_profile-edit", submitEditProfileForm);
 popupProfile.setEventListeners();
@@ -60,8 +58,8 @@ function submitEditProfileForm(data) {
   userInfo.setUserInfo(data);
 }
 
-function createCard(card) {
-  const cardNew = new Card(card, '.gallery-template', handleCardClick);
+function createCard(item) {
+  const cardNew = new Card(item, '.gallery-template', handleCardClick);
   return cardNew.generateCard();
 }
 

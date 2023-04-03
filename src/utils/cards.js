@@ -1,26 +1,26 @@
-import Bamboo_forest from '../images/Bamboo_forest.jpg';
-import Tianzi_Mountains from '../images/Tianzi_Mountains.jpg';
-import Santorini_island from '../images/Santorini_island.jpg';
-import Great_Canyon from '../images/Great_Canyon.jpg';
+import BambooForest from '../images/Bamboo_forest.jpg';
+import TianziMountains from '../images/Tianzi_Mountains.jpg';
+import SantoriniIsland from '../images/Santorini_island.jpg';
+import GreatCanyon from '../images/Great_Canyon.jpg';
 import Pamukkale from '../images/Pamukkale.jpg';
 import Venice from '../images/Venice.jpg';
-export default initialCards;
+
 const initialCards = [
     {
       name: 'Бамбуковый лес',
-      link: Bamboo_forest,
+      link: BambooForest,
     },
     {
       name: 'Горы Тяньцзи',
-      link: Tianzi_Mountains,
+      link: TianziMountains,
     },
     {
       name: 'Остров Санторини',
-      link: Santorini_island,
+      link: SantoriniIsland,
     },
     {
       name: 'Великий каньон',
-      link: Great_Canyon,
+      link: GreatCanyon,
     },
     {
       name: 'Памуккале',
@@ -31,3 +31,4 @@ const initialCards = [
       link: Venice,
     }
   ];
+  export default initialCards;
