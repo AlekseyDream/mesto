@@ -1,8 +1,8 @@
 export default class Card {
-  constructor(card, templateSelector, ZoomCardClick) {
+  constructor(card, templateSelector, handleCardClick) {
     this._name = card.name;
     this._link = card.link;
-    this._ZoomCardClick = ZoomCardClick;
+    this._handleCardClick = handleCardClick;
     this._templateSelector = templateSelector;
     this._element = this._getTemplate();
     this._deleteCard = this._element.querySelector('.gallery__button-delete');
@@ -35,6 +35,6 @@ export default class Card {
   _setEventListeners() {
     this._cardLike.addEventListener('click', () => this._setLike());
     this._deleteCard.addEventListener('click', () => this._deleteCard());
-    this._cardImage.addEventListener('click', () => this._ZoomCardClick(this._name, this._link));
+    this._cardImage.addEventListener('click', () => this._handleCardClick(this._name, this._link));
   }
 }

@@ -21,14 +21,14 @@ export default class Popup {
     if (evt.key === "Escape") this.close();
   }
 
-  _closePopupByOverlay = (evt) => {
+  _closeByOverlay = (evt) => {
     if (evt.target.classList.contains("popup")) this.close();
   }
 
 
   setEventListeners() {
     this._popupProfileClose.addEventListener('click', this.close);
-    this._popup.addEventListener('click', this._closePopupByOverlay);
+    this._popup.addEventListener('click', this._closeByOverlay);
   }
 }
 
