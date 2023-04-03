@@ -24,20 +24,23 @@ const profileValidator = new FormValidator(formEditProfile, validationConfig);
 profileValidator.enableValidation();
 
 const section = new Section({
-  items: initialCards, renderer: (item) => createCard(item)}, '.gallery');
+  items: initialCards, renderer: (item) => createCard(item)
+}, ".gallery");
 
-const popupProfile = new PopupWithForm("#popup-profile", submitEditProfileForm);
+const popupProfile = new PopupWithForm(".popup_data_profile-edit", submitEditProfileForm);
 popupProfile.setEventListeners();
 
-const popupWithImage = new PopupWithImage("#popup-image");
+const popupWithImage = new PopupWithImage(".popup_data_image-add");
 popupWithImage.setEventListeners();
 
-const popupCards = new PopupWithForm("#popup-card", handleCardFormSubmit);
+const popupCards = new PopupWithForm(".popup_data_card-add", handleCardFormSubmit);
 popupCards.setEventListeners();
 
-const userInfo = new UserInfo('.profile__name', '.profile__description');
+const userInfo = new UserInfo(".profile__name", ".profile__description");
 
-const handleCardClick = (name, link) => { popupWithImage.open(name, link) };
+const handleCardClick = (name, link) => {
+  popupWithImage.open(name, link);
+}
 
 buttonProfileEdit.addEventListener('click', () => {
   popupProfile.open();
@@ -55,23 +58,15 @@ buttonAddCard.addEventListener('click', () => {
 
 function submitEditProfileForm(data) {
   userInfo.setUserInfo(data);
-};
+}
 
-function createCard(item) {
-  const cardNew = new Card(item, '#gallery-template', handleCardClick);
-  const cardElement = cardNew.generateCard();
-  return cardElement;
-};
+function createCard(card) {
+  const cardNew = new Card(card, '.gallery-template', handleCardClick);
+  return cardNew.generateCard();
+}
 
 function handleCardFormSubmit(cardNew) {
   section.addItem(createCard(cardNew));
-};
-
-function handleAddCardButton() {
-  open(popupCards);
-  cardForm.reset();
-  cardValidator.resetValid();
-};
-buttonAddCard.addEventListener('click', handleAddCardButton);
+}
 
 section.renderItems();

@@ -8,6 +8,7 @@ export class Card {
       this._deleteCard = this._element.querySelector('.gallery__button-delete');
       this._cardLike = this._element.querySelector('.gallery__button-like');
       this._cardImage = this._element.querySelector('.gallery__image');
+      this._cardName = this._element.querySelector('.gallery__title');
     }
   
     _getTemplate() {
@@ -16,7 +17,7 @@ export class Card {
     }
   
     createCard() {
-      this._element.querySelector('.gallery__title').textContent = this._name;
+      this._cardName.textContent = this._name;
       this._cardImage.alt = this._name;
       this._cardImage.src = this._link;
       this._setEventListeners();

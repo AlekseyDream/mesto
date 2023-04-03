@@ -119,7 +119,7 @@ function handleAddCardButton() {
 };
 
 function createCard(item) {
-  const cardNew = new Card(item, '#gallery-template', handleCardClick);
+  const cardNew = new Card(item, '.gallery-template', handleCardClick);
   const cardElement = cardNew.createCard();
 
   return cardElement;
