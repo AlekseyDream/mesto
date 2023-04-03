@@ -58,8 +58,8 @@ function submitEditProfileForm(data) {
   userInfo.setUserInfo(data);
 }
 
-function createCard(item) {
-  const cardNew = new Card(item, '.gallery-template', handleCardClick);
+function createCard(card) {
+  const cardNew = new Card(card, '.gallery-template', handleCardClick);
   return cardNew.generateCard();
 }
 
