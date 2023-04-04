@@ -51,7 +51,6 @@ buttonProfileEdit.addEventListener('click', () => {
 buttonAddCard.addEventListener('click', () => {
   popupCards.open();
   cardValidator.resetValid();
-  cardForm.reset();
 });
 
 function submitEditProfileForm(data) {

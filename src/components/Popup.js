@@ -7,17 +7,17 @@ export default class Popup {
 
   open() {
     this._popup.classList.add("popup_opened");
-    document.addEventListener("keyup", this._keyHandler);
+    document.addEventListener("keyup", this._handleEscapeKey);
   }
 
 
   close() {
     this._popup.classList.remove("popup_opened");
-    document.removeEventListener("keyup", this._keyHandler);
+    document.removeEventListener("keyup", this._handleEscapeKey);
 
   }
 
-  _keyHandler = (evt) => {
+  _handleEscapeKey = (evt) => {
     if (evt.key === "Escape") this.close();
   }
 
