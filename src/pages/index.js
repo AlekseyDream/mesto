@@ -183,7 +183,7 @@ buttonAddCard.addEventListener('click', () => {
   cardValidator.resetValid();
 });
 
-popupAvatar.addEventListener("click", () => {
-  avatarValidator.resetValid();
+profileButtonEdit.addEventListener('click', () => {
   popupAvatar.open();
+  avatarValidator.resetValid();
 });
