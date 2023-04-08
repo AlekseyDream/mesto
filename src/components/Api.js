@@ -23,11 +23,11 @@ export default class Api {
       .then(res => { return this._handleReply(res); })
     }
   
-    updateUserInfo(userData) {
+    updateUserInfo(data) {
       return fetch(`${this._url}/users/me`, {
         method: "PATCH",
         headers: this._headers,
-        body: JSON.stringify({ name: userData.name, about: userData.about }),
+        body: JSON.stringify({ name: data.name, about: data.about }),
       })
       .then(res => { return this._handleReply(res); })
     }
@@ -65,11 +65,11 @@ export default class Api {
       .then(res => { return this._handleReply(res); })
     }
   
-    updateUserAvatar(userData) {
+    updateUserAvatar(data) {
       return fetch(`${this._url}/users/me/avatar`, {
         method: "PATCH",
         headers: this._headers,
-        body: JSON.stringify(userData),
+        body: JSON.stringify(data),
       })
       .then(res => { return this._handleReply(res); })
     }
