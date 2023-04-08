@@ -13,6 +13,7 @@ import {
   formEditProfile,
   inputName,
   inputAbout,
+  avatarInput,
   cardForm,
   buttonAddCard,
   validationConfig,
