@@ -130,7 +130,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
   const createCard = (item) => {
     const cardNew = new Card(
       {
-        card: item,
+        data: item,
         userId: userId,
         handleCardClick: (name, link) => {
           popupWithImage.open(name, link);
@@ -162,6 +162,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
       },
       ".gallery-template"
     );
+    
   const cardElement = cardNew.generateCard();
     return cardElement;
   };
