@@ -35,7 +35,7 @@ export default class Card {
   }
 
   showLike() {
-    this._like.forEach((el) => {
+    this._likes.forEach((el) => {
       if (el._id === this._userId) {
         this._cardLike.classList.add("gallery__button-like_active");
       }

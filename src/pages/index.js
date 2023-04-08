@@ -1,11 +1,11 @@
 import "./index.css";
-import { Card } from "../components/Card.js";
-import { FormValidator } from '../components/FormValidator.js';
+import Card  from "../components/Card.js";
+import FormValidator  from '../components/FormValidator.js';
 import Section from "../components/Section.js";
-import { PopupWithImage } from "../components/PopupWithImage.js";
-import { PopupWithForm } from "../components/PopupWithForm.js";
+import PopupWithImage  from "../components/PopupWithImage.js";
+import PopupWithForm from "../components/PopupWithForm.js";
 import PopupNotice from "../components/PopupNotice.js";
-import { UserInfo } from "../components/UserInfo.js";
+import UserInfo from "../components/UserInfo.js";
 import Api from "../components/Api.js";
 import {
   profileButton,
@@ -13,7 +13,6 @@ import {
   formEditProfile,
   inputName,
   inputAbout,
-  avatarInput,
   cardForm,
   buttonAddCard,
   validationConfig,
@@ -164,7 +163,7 @@ const createCard = (item) => {
         popupCardsDelete.open(cardNew);
       },
     },
-    ".gallery-template"
+    "#gallery-template"
   );
 
   const cardElement = cardNew.generateCard();
