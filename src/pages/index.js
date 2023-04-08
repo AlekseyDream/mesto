@@ -1,11 +1,11 @@
-import "../pages/index.css";
-import Card from "../components/Card.js";
-import FormValidator from '../components/FormValidator.js';
+import "./index.css";
+import { Card } from "../components/Card.js";
+import { FormValidator } from '../components/FormValidator.js';
 import Section from "../components/Section.js";
-import PopupWithImage from "../components/PopupWithImage.js";
-import PopupWithForm from "../components/PopupWithForm.js";
+import { PopupWithImage } from "../components/PopupWithImage.js";
+import { PopupWithForm } from "../components/PopupWithForm.js";
 import PopupNotice from "../components/PopupNotice.js";
-import UserInfo from "../components/UserInfo.js";
+import { UserInfo } from "../components/UserInfo.js";
 import Api from "../components/Api.js";
 import {
   profileButton,
@@ -34,8 +34,11 @@ const avatarValidator = new FormValidator(avatarForm, validationConfig);
 avatarValidator.enableValidation();
 
 const section = new Section({
-  renderer: (item) => { section.addItem(createCard(item)); },
-}, ".gallery");
+  renderer: (item) => {
+    section.addItem(createCard(item));
+  },
+},
+  ".gallery");
 
 const popupProfile = new PopupWithForm(".popup_data_profile-edit", (userData) => {
   popupProfile.loading(true);
@@ -92,21 +95,22 @@ const popupCards = new PopupWithForm(".popup_data_card-add", (cardData) => {
 });
 popupCards.setEventListeners();
 
-const popupCardDelete = new PopupNotice(".popup_data_delete", (card) => {
-  popupCardDelete.loadingConfirm(true);
+const popupCardsDelete = new PopupNotice(".popup_data_delete", (card) => {
+  popupCardsDelete.loadingConfirm(true);
   api
     .deleteCard(card.getCardId())
     .then(() => {
       card.deleteCard();
-      popupCardDelete.close();
+      popupCardsDelete.close();
     })
     .catch((err) => {
       console.log(err);
     })
     .finally(() => {
-      popupCardDelete.loadingConfirm(false);
+      popupCardsDelete.loadingConfirm(false);
     });
 });
+popupCardsDelete.setEventListeners();
 
 const userInfo = new UserInfo({
   nameSelector: ".profile__name",
@@ -127,45 +131,45 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
     console.log(err);
   });
 
-  const createCard = (item) => {
-    const cardNew = new Card(
-      {
-        data: item,
-        userId: userId,
-        handleCardClick: (name, link) => {
-          popupWithImage.open(name, link);
-        },
-        handleLikeClick: () => {
-          if (cardNew.isLike()) {
-            api
-              .deleteLike(cardNew.getCardId())
-              .then((res) => {
-                cardNew.likeCard(res.likes.length);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          } else {
-            api
-              .setLike(cardNew.getCardId())
-              .then((res) => {
-                cardNew.likeCard(res.likes.length);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          }
-        },
-        handleDeleteCard: () => {
-          popupCardDelete.open(cardNew);
-        },
+const createCard = (item) => {
+  const cardNew = new Card(
+    {
+      data: item,
+      userId: userId,
+      handleCardClick: (name, link) => {
+        popupWithImage.open(name, link);
       },
-      ".gallery-template"
-    );
-    
+      handleLikeClick: () => {
+        if (cardNew.isLike()) {
+          api
+            .deleteLike(cardNew.getCardId())
+            .then((res) => {
+              cardNew.likeCard(res.likes.length);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          api
+            .setLike(cardNew.getCardId())
+            .then((res) => {
+              cardNew.likeCard(res.likes.length);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }
+      },
+      handleDeleteCard: () => {
+        popupCardsDelete.open(cardNew);
+      },
+    },
+    ".gallery-template"
+  );
+
   const cardElement = cardNew.generateCard();
-    return cardElement;
-  };
+  return cardElement;
+};
 
 profileButton.addEventListener('click', () => {
   popupProfile.open();

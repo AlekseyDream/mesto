@@ -15,14 +15,14 @@ export const formEditProfile = popupProfile.querySelector('#popup__form-profile'
 export const inputName = popupProfile.querySelector('.popup__form-input_data_name');
 export const inputAbout = popupProfile.querySelector('.popup__form-input_data_about');
 
-export const popupCard = document.querySelector('.popup_data_card-add');
-export const popupCardClose = popupCard.querySelector('.popup__button-close');
-export const name = popupCard.querySelector('.popup__form-input_data_title');
-export const inputImage = popupCard.querySelector('.popup__form-input_data_link');
-export const cardForm = popupCard.querySelector('#popup__form-card');
+export const popupCards = document.querySelector('.popup_data_card-add');
+export const popupCardsClose = popupCards.querySelector('.popup__button-close');
+export const name = popupCards.querySelector('.popup__form-input_data_title');
+export const inputImage = popupCards.querySelector('.popup__form-input_data_link');
+export const cardForm = popupCards.querySelector('#popup__form-card');
 
-export const popupCardImage = document.querySelector('.popup_data_image-add');
-export const popupCardImageClose = popupCardImage.querySelector('.popup__button-close');
+export const popupCardsImage = document.querySelector('.popup_data_image-add');
+export const popupCardsImageClose = popupCardsImage.querySelector('.popup__button-close');
 
 export const buttonAddCard = document.querySelector('.profile__button-addCard');
 export const cardContainer = document.querySelector('.gallery');
