@@ -1,13 +1,13 @@
 export default class Card {
-  constructor({ Card, userId, handleCardClick, handleLikeClick, handleDeleteCard },
+  constructor({ data, userId, handleCardClick, handleLikeClick, handleDeleteCard },
     templateSelector) {
-    this._Card = Card;
-    this._name = Card.name;
-    this._link = Card.link;
-    this._cardId = Card._id;
-    this._likes = Card.likes;
+    this._data = data;
+    this._name = data.name;
+    this._link = data.link;
+    this._cardId = data._id;
+    this._likes = data.likes;
     this._userId = userId;
-    this._isOwner = Card.owner._id;
+    this._isOwner = data.owner._id;
     this._handleCardClick = handleCardClick;
     this._handleLikeClick = handleLikeClick;
     this._handleDeleteCard = handleDeleteCard;
@@ -25,7 +25,7 @@ export default class Card {
   }
 
   likeCard(count) {
-    this._likes = this._Card.likes;
+    this._likes = this._data.likes;
     this._likeNumber.textContent = count;
     this._cardLike.classList.toggle("gallery__button-like_active");
   }

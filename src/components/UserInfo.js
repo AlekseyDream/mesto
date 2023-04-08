@@ -5,8 +5,8 @@ export default class UserInfo {
       this.profileAvatar = document.querySelector(profileAvatar);
       }
       
-      setUserAvatar({ profileAvatar }) {
-        this.profileAvatar.src = profileAvatar;
+      setUserAvatar({ avatar }) {
+        this.profileAvatar.src = avatar;
       }
 
       getUserInfo() {
