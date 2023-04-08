@@ -8,8 +8,8 @@ import PopupNotice from "../components/PopupNotice.js";
 import UserInfo from "../components/UserInfo.js";
 import Api from "../components/Api.js";
 import {
-  profile__button,
-  profile_ButtonEdit,
+  profileButton,
+  profileButtonEdit,
   formEditProfile,
   inputName,
   inputAbout,
@@ -127,10 +127,10 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
     console.log(err);
   });
 
-  const createCard = (card) => {
+  const createCard = (item) => {
     const cardNew = new Card(
       {
-        Card: card,
+        Card: item,
         userId: userId,
         handleCardClick: (name, link) => {
           popupWithImage.open(name, link);
@@ -140,7 +140,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
             api
               .deleteLike(cardNew.getCardId())
               .then((res) => {
-                cardNew.likeCard(res.like.length);
+                cardNew.likeCard(res.likes.length);
               })
               .catch((err) => {
                 console.log(err);
@@ -149,7 +149,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
             api
               .setLike(cardNew.getCardId())
               .then((res) => {
-                cardNew.likeCard(res.like.length);
+                cardNew.likeCard(res.likes.length);
               })
               .catch((err) => {
                 console.log(err);
@@ -166,7 +166,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
     return cardElement;
   };
 
-profile__button.addEventListener('click', () => {
+profileButton.addEventListener('click', () => {
   popupProfile.open();
   const info = userInfo.getUserInfo();
   inputName.value = info.name;
@@ -179,7 +179,7 @@ buttonAddCard.addEventListener('click', () => {
   cardValidator.resetValid();
 });
 
-profile_ButtonEdit.addEventListener("click", () => {
+profileButtonEdit.addEventListener("click", () => {
   avatarValidator.resetValid();
   popupAvatar.open();
 });

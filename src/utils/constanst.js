@@ -1,6 +1,6 @@
 export const content = document.querySelector('.content');
-export const profile__button = content.querySelector('.profile__button');
-export const profile_ButtonEdit = document.querySelector('.profile__button-edit');
+export const profileButton = content.querySelector('.profile__button');
+export const profileButtonEdit = document.querySelector('.profile__button-edit');
 export const profileName = content.querySelector('.profile__name');
 export const profileDescription = content.querySelector('.profile__description');
 

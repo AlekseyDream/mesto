@@ -5,7 +5,7 @@ export default class Card {
     this._name = Card.name;
     this._link = Card.link;
     this._cardId = Card._id;
-    this._like = Card.like;
+    this._likes = Card.likes;
     this._userId = userId;
     this._isOwner = Card.owner._id;
     this._handleCardClick = handleCardClick;
@@ -17,7 +17,7 @@ export default class Card {
     this._cardLike = this._element.querySelector('.gallery__button-like');
     this._cardImage = this._element.querySelector('.gallery__image');
     this._cardName = this._element.querySelector('.gallery__title');
-    this._likeNumber = this._element.querySelector(".gallery__like-number");
+    this._likeNumber = this._element.querySelector('.gallery__like-number');
   }
 
   _getTemplate() {
@@ -25,7 +25,7 @@ export default class Card {
   }
 
   likeCard(count) {
-    this._like = this._Card.like;
+    this._likes = this._Card.likes;
     this._likeNumber.textContent = count;
     this._cardLike.classList.toggle("gallery__button-like_active");
   }
@@ -63,7 +63,7 @@ export default class Card {
     this._cardName.textContent = this._name;
     this._cardImage.alt = this._name;
     this._cardImage.src = this._link;
-    this._likeNumber.textContent = this._like.length;
+    this._likeNumber.textContent = this._likes.length;
     this._setEventListeners();
     this.hiddenTrash();
     this.showLike();
