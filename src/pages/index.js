@@ -62,7 +62,7 @@ const popupAvatar = new PopupWithForm(".popup_data_avatar", (userData) => {
     .updateUserAvatar(userData)
     .then((res) => {
       userInfo.setUserAvatar(res);
-      popupAvatar.close();
+      popupAvatar.open();
     })
     .catch((err) => {
       console.log(err);
