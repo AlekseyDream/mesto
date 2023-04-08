@@ -65,11 +65,11 @@ export default class Api {
       .then(res => { return this._handleReply(res); })
     }
   
-    updateUserAvatar(userData) {
+    updateUserAvatar(data) {
       return fetch(`${this._url}/users/me/avatar`, {
         method: "PATCH",
         headers: this._headers,
-        body: JSON.stringify(userData),
+        body: JSON.stringify(data),
       })
       .then(res => { return this._handleReply(res); })
     }
