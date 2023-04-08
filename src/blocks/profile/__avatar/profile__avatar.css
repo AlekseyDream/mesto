@@ -6,6 +6,14 @@
     height: 120px;
     position: relative;
     width: 120px;
+    border-radius: 50%;
+    height: 120px;
+    margin: 0;
+    min-width: 120px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    
 }
 
 @media (min-width: 768px) {
