@@ -8,21 +8,19 @@ export default class Api {
       if (res.ok) {
         return res.json();
       }
-      return Promise.reject(`Ошибка: ${res.status}`);
+      else {
+        return Promise.reject(`код ошибки: ${res.status}`);
+      }
     }
   
     getUserInfo() {
       return fetch(`${this._url}/users/me`, { headers: this._headers })
-      .then(
-        this._handleReply
-      );
+      .then(res => { return this._handleReply(res); })
     }
   
     getAllCards() {
       return fetch(`${this._url}/cards`, { headers: this._headers })
-      .then(
-        this._handleReply
-      );
+      .then(res => { return this._handleReply(res); })
     }
   
     updateUserInfo(data) {
@@ -31,7 +29,7 @@ export default class Api {
         headers: this._headers,
         body: JSON.stringify({ name: data.name, about: data.about }),
       })
-      .then(this._handleReply);
+      .then(res => { return this._handleReply(res); })
     }
   
     addNewCard(cardData) {
@@ -40,7 +38,7 @@ export default class Api {
         headers: this._headers,
         body: JSON.stringify(cardData),
       })
-      .then(this._handleReply);
+      .then(res => { return this._handleReply(res); })
     }
   
     deleteCard(id) {
@@ -48,7 +46,7 @@ export default class Api {
         method: "DELETE",
         headers: this._headers,
       })
-      .then(this._handleReply);
+      .then(res => { return this._handleReply(res); })
     }
   
     setLike(id) {
@@ -56,7 +54,7 @@ export default class Api {
         method: "PUT",
         headers: this._headers,
       })
-      .then(this._handleReply);
+      .then(res => { return this._handleReply(res); })
     }
   
     deleteLike(id) {
@@ -64,15 +62,15 @@ export default class Api {
         method: "DELETE",
         headers: this._headers,
       })
-      .then(this._handleReply);
+      .then(res => { return this._handleReply(res); })
     }
   
-    updateUserAvatar(data) {
+    updateUserAvatar(userData) {
       return fetch(`${this._url}/users/me/avatar`, {
-        headers: this._headers,
         method: "PATCH",
-        body: JSON.stringify(data),
+        headers: this._headers,
+        body: JSON.stringify(userData),
       })
-      .then(this._handleReply);
+      .then(res => { return this._handleReply(res); })
     }
   }
