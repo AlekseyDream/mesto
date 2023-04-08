@@ -96,7 +96,7 @@ const popupCards = new PopupWithForm(".popup_data_card-add", (cardData) => {
 });
 popupCards.setEventListeners();
 
-const popupCardDelete = new PopupWithConfirm(".popup_data_delete", (card) => {
+const popupCardDelete = new PopupNotice(".popup_data_delete", (card) => {
   popupCardDelete.loadingConfirm(true);
   api
     .deleteCard(card.getCardId())
