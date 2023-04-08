@@ -130,7 +130,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
   const createCard = (item) => {
     const cardNew = new Card(
       {
-        Card: item,
+        card: item,
         userId: userId,
         handleCardClick: (name, link) => {
           popupWithImage.open(name, link);
