@@ -31,8 +31,11 @@
                         <button type="button" class="gallery__button-delete"></button>
                     </div>
                     <div class="gallery__info">
-                        <h3 class="gallery__title"></h3>
-                        <button type="button" class="gallery__button-like"></button>
+                        <p class="gallery__title"></p>
+                        <div class="gallery__like-container">
+                            <button type="button" class="gallery__button-like"></button>
+                            <p class="gallery__like-number">0</p>
+                        </div>
                     </div>
                 </li>
             </template>
@@ -63,9 +66,8 @@
             <p class="popup__title">Новое место</p>
             <button type="button" class="popup__button-close"></button>
             <form class="popup__form" id="popup__form-card" name="popupForm" novalidate>
-                <input type="text" id="title-input" name="name"
-                    class="popup__form-input popup__form-input_data_title" placeholder="Название" minlength="2"
-                    maxlength="30" required>
+                <input type="text" id="title-input" name="name" class="popup__form-input popup__form-input_data_title"
+                    placeholder="Название" minlength="2" maxlength="30" required>
                 <span class="popup__input-error title-input-error"></span>
                 <input type="url" id="link-input" name="link" class="popup__form-input popup__form-input_data_link"
                     placeholder="Ссылка на картинку" required>
@@ -79,6 +81,27 @@
             <button type="button" class="popup__button-close"></button>
             <img class="popup__image" alt="">
             <p class="popup__caption"></p>
+        </div>
+    </div>
+    <div class="popup_data_avatar popup">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+            <p class="popup__title">Обновить аватар</p>
+            <form class="popup__form popup__form-avatar" name="popupForm" novalidate>
+                <input id="avatar" name="avatar" class="popup__form-input popup__form-input_data_avatar" type="url"
+                    autocomplete="off" placeholder="Ссылка на картинку" required />
+                <span class="popup__input-error avatar-input-error"></span>
+                <button type="submit" class="popup__button-save">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup_data_delete popup">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+            <p class="popup__title popup__title_delete">Вы уверены?</p>
+            <form class="popup__form popup__form_delete" name="deleteForm" novalidate>
+                <button type="submit" class="popup__button-save">Да</button>
+            </form>
         </div>
     </div>
 </body>
