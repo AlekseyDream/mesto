@@ -110,7 +110,7 @@ const popupCardDelete = new PopupNotice(".popup_data_delete", (card) => {
 
 const userInfo = new UserInfo({
   nameSelector: ".profile__name",
-  infoSelector: ".profile__description",
+  aboutSelector: ".profile__description",
   profileAvatar: ".profile__avatar",
 });
 
