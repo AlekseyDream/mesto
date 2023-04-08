@@ -22,6 +22,8 @@ import {
 }
   from "../utils/constanst.js";
 
+let userId;
+
 const cardValidator = new FormValidator(cardForm, validationConfig);
 cardValidator.enableValidation();
 
@@ -73,7 +75,7 @@ const popupWithImage = new PopupWithImage(".popup_data_image-add");
 popupWithImage.setEventListeners();
 
 const popupCards = new PopupWithForm(".popup_data_card-add", (cardData) => {
-  popupCard.loading(true);
+  popupCards.loading(true);
   api
     .addNewCard(cardData)
     .then((res) => {
