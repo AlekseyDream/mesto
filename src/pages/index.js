@@ -62,7 +62,7 @@ const popupAvatar = new PopupWithForm(".popup_data_avatar", (userData) => {
     .updateUserAvatar(userData)
     .then((res) => {
       userInfo.setUserAvatar(res);
-      popupAvatar.open();
+      popupAvatar.close();
     })
     .catch((err) => {
       console.log(err);
@@ -183,7 +183,7 @@ buttonAddCard.addEventListener('click', () => {
   cardValidator.resetValid();
 });
 
-profileButtonEdit.addEventListener("click", () => {
+popupAvatar.addEventListener("click", () => {
   avatarValidator.resetValid();
   popupAvatar.open();
 });
