@@ -5,19 +5,21 @@
   outline: none;
   border: 0;
   background-color: transparent;
+
 }
 
 .profile__button-edit::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../../../images/edit.png");
+  background-image: url(../../../images/edit.png);
   background-size: 26px 26px;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.8);
   content: "";
+  transition: opacity .3s linear;
 }
 
 .profile__button-edit:hover::before {
