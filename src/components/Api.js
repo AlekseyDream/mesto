@@ -47,24 +47,24 @@ export default class Api {
       .then(res => { return this._handleReply(res); })
     }
   
-    deleteCard(cardId) {
-      return fetch(`${this._url}/cards/${cardId}`, {
+    deleteCard(Id) {
+      return fetch(`${this._url}/cards/${Id}`, {
         method: "DELETE",
         headers: this._headers,
       })
       .then(res => { return this._handleReply(res); })
     }
   
-    setLike(cardId) {
-      return fetch(`${this._url}/cards/${cardId}/likes`, {
+    setLike(Id) {
+      return fetch(`${this._url}/cards/${Id}/likes`, {
         method: "PUT",
         headers: this._headers,
       })
       .then(res => { return this._handleReply(res); })
     }
   
-    deleteLike(cardId) {
-      return fetch(`${this._url}/cards/${cardId}/likes`, {
+    deleteLike(Id) {
+      return fetch(`${this._url}/cards/${Id}/likes`, {
         method: "DELETE",
         headers: this._headers,
       })

@@ -21,6 +21,7 @@
 }
 
 .profile__button-edit:hover::before {
+
   opacity: 1;
   cursor: pointer;
 }
