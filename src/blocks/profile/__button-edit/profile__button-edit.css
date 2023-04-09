@@ -20,7 +20,7 @@
     content: "";
   }
   
-  .profile__button-edit:hover {
+  .profile__button-edit::before:hover {
     opacity: 1;
     cursor: pointer;
   }
