@@ -6,7 +6,7 @@ export default class Api {
       this._headers = apiParameters.headers;
     }
   
-    _handleReply(res) {
+    _handleResponse(res) {
       if (res.ok) {
         return res.json();
       }
@@ -19,14 +19,14 @@ export default class Api {
       return fetch(`${this._url}/users/me`, { 
         headers: this._headers 
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   
     getAllCards() {
       return fetch(`${this._url}/cards`, { 
         headers: this._headers 
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   
     updateUserInfo(data) {
@@ -35,7 +35,7 @@ export default class Api {
         headers: this._headers,
         body: JSON.stringify({ name: data.name, about: data.about }),
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   
     addNewCard({ name, link }) {
@@ -44,7 +44,7 @@ export default class Api {
         headers: this._headers,
         body: JSON.stringify({ name, link }),
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   
     deleteCard(Id) {
@@ -52,31 +52,31 @@ export default class Api {
         method: "DELETE",
         headers: this._headers,
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   
-    setLike(Id) {
+    setCardLike(Id) {
       return fetch(`${this._url}/cards/${Id}/likes`, {
         method: "PUT",
         headers: this._headers,
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   
-    deleteLike(Id) {
+    deleteCardLike(Id) {
       return fetch(`${this._url}/cards/${Id}/likes`, {
         method: "DELETE",
         headers: this._headers,
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   
-    updateUserAvatar(data) {
+    updateAvatar(data) {
       return fetch(`${this._url}/users/me/avatar`, {
         method: "PATCH",
         headers: this._headers,
         body: JSON.stringify(data),
       })
-      .then(res => { return this._handleReply(res); })
+      .then(res => { return this._handleResponse(res); })
     }
   }

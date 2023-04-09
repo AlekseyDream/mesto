@@ -59,7 +59,7 @@ popupProfile.setEventListeners();
 const popupAvatar = new PopupWithForm(".popup_data_avatar", (userData) => {
   popupAvatar.loading(true);
   api
-    .updateUserAvatar(userData)
+    .updateAvatar(userData)
     .then((res) => {
       userInfo.setUserAvatar(res);
       popupAvatar.close();
@@ -141,7 +141,7 @@ const createCard = (item) => {
       handleLikeClick: () => {
         if (cardNew.isLike()) {
           api
-            .deleteLike(cardNew.getCardId())
+            .deleteCardLike(cardNew.getCardId())
             .then((res) => {
               cardNew.likeCard(res.likes.length);
             })
@@ -150,7 +150,7 @@ const createCard = (item) => {
             });
         } else {
           api
-            .setLike(cardNew.getCardId())
+            .setCardLike(cardNew.getCardId())
             .then((res) => {
               cardNew.likeCard(res.likes.length);
             })
