@@ -9,11 +9,19 @@
   border-radius: 50%;
 }
 
-.profile__button-edit:hover {
-  opacity: 0.6;
-  cursor: pointer;
-  background-image: url(../../../images/edit.png);
-  background-color: rgba(0, 0, 0, 0.8);
+.profile__button-edit::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../images/edit.png");
+  background-size: 26px 26px;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.profile__button-edit:hover::before {
+  opacity: 1;
+  cursor: pointer;
 }
