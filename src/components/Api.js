@@ -1,3 +1,5 @@
+import { data } from "jquery";
+
 export default class Api {
     constructor(apiParameters) {
       this._url = apiParameters.url;
@@ -69,11 +71,11 @@ export default class Api {
       .then(res => { return this._handleReply(res); })
     }
   
-    updateUserAvatar(avatar) {
+    updateUserAvatar(data) {
       return fetch(`${this._url}/users/me/avatar`, {
         method: "PATCH",
         headers: this._headers,
-        body: JSON.stringify({ avatar: avatar.avatar }),
+        body: JSON.stringify({ avatar: data.avatar }),
       })
       .then(res => { return this._handleReply(res); })
     }
