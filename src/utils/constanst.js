@@ -6,7 +6,7 @@ export const profileDescription = content.querySelector('.profile__description')
 
 export const profileAvatar = content.querySelector(".profile__avatar");
 export const popupAvatar = document.querySelector(".popup_data_avatar");
-export const avatarInput = popupAvatar.querySelector("#avatar");
+export const inputAvatar = popupAvatar.querySelector(".popup__form-input_data_avatar");
 export const avatarForm = popupAvatar.querySelector('#popup__form-avatar');
 
 export const popupProfile = document.querySelector('.popup_data_profile-edit');
