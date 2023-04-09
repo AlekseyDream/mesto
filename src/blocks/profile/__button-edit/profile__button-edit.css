@@ -7,15 +7,13 @@
   background: none;
   border: none;
   border-radius: 50%;
-  background-image: url(../../../images/edit.png);
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  
 }
 
 .profile__button-edit:hover {
-  opacity: 1;
+  opacity: 0.8;
   cursor: pointer;
+  background-image: url(../../../images/edit.png);
+  background-color: rgba(0, 0, 0, 0.8);
+  background-position: center;
+  background-repeat: no-repeat;
 }
