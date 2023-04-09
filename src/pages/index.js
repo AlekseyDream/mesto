@@ -73,6 +73,8 @@ const popupAvatar = new PopupWithForm(".popup_data_avatar", (userData) => {
 });
 popupAvatar.setEventListeners();
 
+console.log(popupAvatar);
+
 const popupWithImage = new PopupWithImage(".popup_data_image-add");
 popupWithImage.setEventListeners();
 
